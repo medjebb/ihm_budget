@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountPopover displays menu items when data is provided 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-riii7s-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <div
+      class="MuiAvatar-root MuiAvatar-circular css-dlwo3h-MuiAvatar-root"
+    >
+      <img
+        alt="Ahmed Amine Mahamani"
+        class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+        src="/assets/images/avatar/avatar-25.webp"
+      />
+    </div>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;
+
+exports[`AccountPopover opens the popover when the avatar button is clicked 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-riii7s-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <div
+      class="MuiAvatar-root MuiAvatar-circular css-dlwo3h-MuiAvatar-root"
+    >
+      <img
+        alt="Ahmed Amine Mahamani"
+        class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+        src="/assets/images/avatar/avatar-25.webp"
+      />
+    </div>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;
+
+exports[`AccountPopover renders the avatar button 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-riii7s-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <div
+      class="MuiAvatar-root MuiAvatar-circular css-dlwo3h-MuiAvatar-root"
+    >
+      <img
+        alt="Ahmed Amine Mahamani"
+        class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+        src="/assets/images/avatar/avatar-25.webp"
+      />
+    </div>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;

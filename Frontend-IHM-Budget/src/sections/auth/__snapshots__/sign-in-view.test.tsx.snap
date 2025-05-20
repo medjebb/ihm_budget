@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInView renders the sign-in form 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1t1x6d"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 css-1xvf6pp-MuiTypography-root"
+    >
+      Sign in
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body2 css-drhbix-MuiTypography-root"
+    >
+      Don’t have an account?
+      <a
+        class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineHover css-3x996s-MuiTypography-root-MuiLink-root"
+      >
+        Get started
+      </a>
+    </p>
+  </div>
+  <div
+    class="MuiBox-root css-1f3cjlq"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-32yp37-MuiFormControl-root-MuiTextField-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1mib03-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r0:"
+        id=":r0:-label"
+      >
+        Email address
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1faydbs-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input css-evvb5l-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r0:"
+          name="email"
+          type="text"
+          value="hello@gmail.com"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1nldwwb-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-14lo706"
+          >
+            <span>
+              Email address
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <a
+      class="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineHover css-1roa2zs-MuiTypography-root-MuiLink-root"
+    >
+      Forgot password?
+    </a>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-32yp37-MuiFormControl-root-MuiTextField-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1mib03-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r1:"
+        id=":r1:-label"
+      >
+        Password
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-1pgxdx6-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1s8eoz8-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r1:"
+          name="password"
+          type="password"
+          value="@demo1234"
+        />
+        <div
+          class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-csfdax-MuiInputAdornment-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1gd7tmh-MuiButtonBase-root-MuiIconButton-root"
+            data-testid="toggle-password-visibility"
+            tabindex="0"
+            type="button"
+          >
+            <span />
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1nldwwb-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-14lo706"
+          >
+            <span>
+              Password
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorInherit MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorInherit MuiButton-disableElevation MuiButton-fullWidth css-j4ao3a-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="submit"
+    >
+      Sign in
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+  <div
+    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1f6a2fz-MuiDivider-root"
+    role="separator"
+  >
+    <span
+      class="MuiDivider-wrapper css-qywfm8-MuiDivider-wrapper"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-overline css-qq2ntd-MuiTypography-root"
+      >
+        OR
+      </span>
+    </span>
+  </div>
+  <div
+    class="MuiBox-root css-1jtf595"
+  >
+    <button
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1y3h6m1-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span />
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

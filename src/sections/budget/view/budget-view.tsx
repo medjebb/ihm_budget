@@ -1,46 +1,95 @@
-import { useState, useCallback, useMemo } from 'react';
-import { Container, Typography } from '@mui/material';
-import { BudgetItem, BudgetSummary } from 'src/model/budget';
+import { useEffect } from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
 import { BudgetForm } from '../budget-form/budget-form';
 import { BudgetList } from '../budget-list/budget-list';
 import { BudgetSummaryView } from '../budget-summary/budget-summary';
+import { BudgetChart } from '../budget-chart/budget-chart';
+import { RootState } from 'src/redux/store';
+import { addBudgetItem, deleteBudgetItem, fetchBudgetItems } from 'src/redux/slices/budgetSlice';
+import { BudgetItem } from 'src/model/budget';
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export function BudgetView() {
-  const [items, setItems] = useState<BudgetItem[]>([]);
+  const dispatch = useDispatch();
+  const { items, summary, loading, error } = useSelector((state: RootState) => state.budget);
 
-  const handleAddItem = useCallback((item: BudgetItem) => {
-    setItems((prev) => [...prev, item]);
-  }, []);
+  useEffect(() => {
+    dispatch(fetchBudgetItems() as any);
+  }, [dispatch]);
 
-  const handleDeleteItem = useCallback((id: string) => {
-    setItems((prev) => prev.filter((item) => item.id !== id));
-  }, []);
+  const handleAddItem = (item: BudgetItem) => {
+    dispatch(addBudgetItem(item));
+  };
 
-  const summary: BudgetSummary = useMemo(() => {
-    const totalIncome = items
-      .filter((item) => item.type === 'income')
-      .reduce((sum, item) => sum + item.amount, 0);
+  const handleDeleteItem = (id: string) => {
+    dispatch(deleteBudgetItem(id));
+  };
 
-    const totalExpenses = items
-      .filter((item) => item.type === 'expense')
-      .reduce((sum, item) => sum + item.amount, 0);
+  if (loading) {
+    return (
+      <Container maxWidth="lg" sx={{ py: 3 }}>
+        <Typography>Loading...</Typography>
+      </Container>
+    );
+  }
 
-    return {
-      totalIncome,
-      totalExpenses,
-      balance: totalIncome - totalExpenses,
-    };
-  }, [items]);
+  if (error) {
+    return (
+      <Container maxWidth="lg" sx={{ py: 3 }}>
+        <Typography color="error">{error}</Typography>
+      </Container>
+    );
+  }
 
   return (
     <Container maxWidth="lg" sx={{ py: 3 }}>
-      <Typography variant="h4" sx={{ mb: 3 }}>
-        Budget Planning
-      </Typography>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={itemVariants}>
+          <Typography variant="h4" sx={{ mb: 3 }}>
+            Budget Planning
+          </Typography>
+        </motion.div>
 
-      <BudgetSummaryView summary={summary} />
-      <BudgetForm onSubmit={handleAddItem} />
-      <BudgetList items={items} onDelete={handleDeleteItem} />
+        <motion.div variants={itemVariants}>
+          <BudgetSummaryView summary={summary} />
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          <Box sx={{ mb: 3 }}>
+            <BudgetChart items={items} />
+          </Box>
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          <BudgetForm onSubmit={handleAddItem} />
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          <BudgetList items={items} onDelete={handleDeleteItem} />
+        </motion.div>
+      </motion.div>
     </Container>
   );
 }
